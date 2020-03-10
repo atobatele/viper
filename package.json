@@ -4,7 +4,36 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rimraf typeScript/",
+    "debug": "node --inspect-brk ./node_modules/.bin/protractor ./typeScript/config/config.js",
+    "build": "npm run clean && npm run tsc",
+    "pretest": "npm run build",
+    "test": "npm run local-test",
+    "local-test": "node_modules/.bin/protractor-flake --max-attempts=3 -- typeScript/config/config.js",
+    "ci-test": "npm run local-test",
+    "tsc": "tsc",
+    "webdriver-update": "webdriver-manager update --gecko=false",
+    "webdriver-start": "webdriver-manager start"
+  },
+  "dependencies": {
+    "@types/dotenv": "^6.1.1",
+    "chromedriver": "^80.0.1",
+    "dotenv": "^8.2.0",
+    "jasmine": "^3.3.1",
+    "jasmine-spec-reporter": "^4.2.1",
+    "moment": "^2.24.0",
+    "protractor": "^5.4.1",
+    "protractor-flake": "^4.0.0",
+    "ts-date": "^2.3.0",
+    "ts-node": "^8.0.3",
+    "typescript": "^3.4.1"
+  },
+  "devDependencies": {
+    "@types/jasmine": "^3.4.4",
+    "@types/jasminewd2": "^2.0.8",
+    "@types/selenium-webdriver": "^4.0.0",
+    "protractor-junit-xml-plugin": "^1.2.1",
+    "rimraf": "^3.0.0"
   },
   "repository": {
     "type": "git",
