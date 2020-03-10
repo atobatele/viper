@@ -25,15 +25,15 @@
     "protractor": "^5.4.1",
     "protractor-flake": "^4.0.0",
     "ts-date": "^2.3.0",
-    "ts-node": "^8.0.3",
-    "typescript": "^3.4.1"
+    "ts-node": "^8.0.3"
   },
   "devDependencies": {
     "@types/jasmine": "^3.4.4",
     "@types/jasminewd2": "^2.0.8",
     "@types/selenium-webdriver": "^4.0.0",
     "protractor-junit-xml-plugin": "^1.2.1",
-    "rimraf": "^3.0.0"
+    "rimraf": "^3.0.0",
+    "typescript": "^3.8.3"
   },
   "repository": {
     "type": "git",

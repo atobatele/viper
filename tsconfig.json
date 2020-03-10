@@ -10,10 +10,5 @@
         "noImplicitAny": false,
         "skipLibCheck": true,
         "outDir": "typeScript"
-    },
-    "exclude": [
-        "node_modules",
-        "typescript",
-        "plugins.ts"
-    ]
+    }
 }
